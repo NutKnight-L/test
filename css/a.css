@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+body{
+  background-color: lightblue;
+}
+
+.word_jianju{
+  word-spacing: 15px;
+}
+.letter_jianju{
+  letter-spacing: 5px;
+}
+.height_hang{
+  line-height: 20px;
+}
+.p_center{
+  text-align: center;
+}
+.p_right{
+  text-align: right;
+}
+.p_direction{
+  direction: rtl;
+}
+.p_suojin{
+  text-indent: 40px;
+}
+.xfx{
+  text-decoration: underline;
+}
+.sfx{
+  text-decoration: overline;
+}
+.scx{
+  text-decoration: line-through;
+}
+.szmdx{
+  text-transform: capitalize;
+}
+.dx{
+  text-transform: uppercase;
+}
+.xx{
+  text-decoration: lowercase;
+}
+.xingzhuang{
+  width: 80px;
+  height: 30px;
+  background-color: #ffffff;
+  border: 1px #000000 solid;
+}
+.xingzhuang:hover{
+  width: 140px;
+  height: 60px;
+}
+.xieti{
+  font-style: italic;
+}
+.cuti{
+  font-weight: bold;
+}
+.cucuti{
+  font-weight: bolder;
+}
+.yinying{
+  color: #ffffff;
+  text-shadow: 1px 1px 2px #000000; /* 向右偏移，向下偏移，模糊范围*/
+}
+.yuanjiao{
+  border: 3px #000000 solid;
+  border-radius: 15px;
+  background-color: #E57068;
+}
+.xingzhuang2{
+  width: 80px;
+  height: 30px;
+  border: 1px #000000 solid;
+  background-color: #ffffff;
+}
+.xingzhuang2:hover{
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background-color: #000000;
+  transition-duration: 1s; /* 变化所需要的时间 */
+  /* transition-property: width 只让宽度平滑过渡 */
+  /* transition-delay 延迟*/
+}
+
+.xingzhuang3{
+  width: 100px;
+  height: 100px;
+  background-color: #ffffff;
+  border: 1px #000000 solid;
+}
+.xingzhuang3:hover{
+  animation-duration: 3s; /* 时间 */
+  animation-name: donghua;
+  animation-iteration-count: infinite; /* 次数：无限 */
+  animation-direction: alternate; /* 动画方向：交替（变大变小再变大）*/
+}
+@keyframes donghua{
+  from{
+    width: 125px;
+    height: 125px;
+    border-radius: 12.5%;
+    background-color: #EDC9C6;
+  }
+  50%{
+    width: 150px;
+    height: 150px;
+    border-radius: 25%;
+    background-color: #F18780;
+  }
+  75%{
+    width: 175px;
+    height: 175px;
+    border-radius: 37.5%;
+    background-color: #F94E43;
+  }
+  to{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #F70E00;
+  }
+}
+.shape{
+  width: 100px;
+  height: 100px;
+  background-color: #ffffff;
+  border: 1px #000000 solid;
+  border-radius: 50%;
+}
+.shape:hover{
+  transform: rotate(360deg); /* 旋转360度 */
+  transition-duration: 1s;
+}
+.shape2{
+  width: 100px;
+  height: 100px;
+  background-color: #ffffff;
+  border: 1px #000000 solid;
+  border-radius: 50%;
+  transition-duration: 1s; /* 在这里留下一个就可以 */
+}
+.shape2:hover{
+  transform: scale(1.5) rotate(360deg);/* 缩放比例 */
+  /* transition在这里时多余的 */
+}

@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+body{
+  background-color: LightBlue;
+}
+
+.button1{
+  width: 80px;
+  height: 35px;
+  color: #ffffff;
+  font-size: 12pt;
+  border: 1px #000000 solid;
+  border-radius: 7px;
+  background-color: #474747;
+  box-shadow: 1px 1px 1px #6E6E6E;
+}
+.button1:active{
+  background-color: #292828;
+}

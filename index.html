@@ -1,0 +1,219 @@
+<!DOCTYPE html><!-- 声明 -->
+<!--简体中文-->
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- width=device-width表示宽度是设备屏幕的宽度 -->
+    <!-- initial-scale=1.0表示页面初始的缩放值，1.0是占屏幕的100% -->
+    <!-- minimum/maximum-scale表示页面最小/大的缩放比例 -->
+    <!-- user-scale表示用户是否可以调整缩放比例 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=1.0 maximum-scale=1.0 user-scalable=no">
+    <title>首页</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+</head>
+<body>
+    <h3>文字处理</h3>
+    <!-- b是加粗，u是下划线，s是删除线，em是斜体，一般用css设置 -->
+    <b>六王毕</b>，<u>四海一</u>，<s>蜀山兀</s>，<em>阿房出</em>。<br>
+    六王毕，四海一，蜀山兀，阿房出。
+
+    <h3>表格</h3>
+    <table border="1px">
+        <tr>
+            <th>单元格</th>
+            <th>单元格</th>
+            <th>单元格</th>
+            <th>单元格</th>
+        </tr>
+        <tr>
+            <!-- rowspan是行的合并 -->
+            <td rowspan="2">合并单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+    </table>
+    <br>
+    <table border="1px">
+        <tr>
+            <th>单元格</th>
+            <th>单元格</th>
+            <th>单元格</th>
+            <th>单元格</th>
+        </tr>
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+        <tr>
+            <td>单元格</td>
+            <!-- colspan是列的合并 -->
+            <td colspan="2">合并单元格</td>
+            <td>单元格</td>
+        </tr>
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+    </table>
+
+    <h3>列表</h3>
+    <h4>无序列表(ul)</h4>
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+    </ul>
+
+    <h4>有序列表(ol)</h4>
+    <ol>
+        <li>item 1</li>
+        <li>item 2</li>
+    </ol>
+
+    <ol reversed>
+        <!-- reversed是降序 -->
+        降序有序列表
+        <li>item 1</li>
+        <li>item 2</li>
+    </ol>
+
+    <ol type="a">
+        不同编号有序列表
+        <li>item 1</li>
+        <li>item 2</li>
+        <img src="imgs/ol_type.png" alt="ol_type">
+    </ol>
+
+    <ol>
+        “递进式”的有序列表
+        <li>item 1</li>
+        <ol>
+            <li>item 1</li>
+            <li>item 2</li>
+        </ol>
+        <li>item 2</li>
+        <ol>
+            <li>item 1</li>
+            <li>item 2</li>
+        </ol>
+    </ol>
+    
+    <h3>表单：获取用户输入数据，和用户互动的组件</h3>
+    <form>
+        <h4>简单的文本框</h4>
+        <input type="text" value="账号"><!-- 默认显示文本 -->
+        <h4>默认显示文字的文本框</h4>
+        <input type="text" placeholder="账号"> <!-- 显示提示文本，无输入时显示 -->
+        <h4>限制输入最大字符数的文本框</h4>
+        <input type="text" maxlength="8" placeholder="最多输入8个字符"> <!-- 限制最多输入字符数 -->
+        <h4>增加了输入字符数的文本框</h4>
+        <input type="text" size="32"> <!-- 拓宽文本框长度 -->
+        <h4>只读文本框</h4>
+        <input type="text" value="只读状态" readonly> <!-- 只读 -->
+        <h4>密码型文本框，上传时仍是明文</h4>
+        <input type="password" placeholder="密码"> <!-- 字符会变成圆圈 -->
+        <h4>按钮，运用范围小</h4>
+        <input type="button" value="按钮">
+        <h4>提交按钮</h4>
+        <input type="submit" value="提交按钮"> <!-- 提交表单 -->
+        <h4>滑动选择数值器</h4>
+        <input type="range" min="-100" max="100" value="0" step="10"> <!-- value初始值 step每次移动值 -->
+        <h4>数字选择 & 输入</h4>
+        <input type="number" min="1" max="12" value="1"> <!-- min最小 max最大 value默认 -->
+        <h4>复选框</h4>
+        <input type="checkbox">记住密码 <!-- 文字不能用value属性 -->
+        <h4>单选框</h4>
+        <input type="radio">我是男生 <!-- 文字也不能用value属性 -->
+        <h4>一组单选框，选定一个后，会取消另一个的选中状态</h4>
+        <!-- name要一样，定义为一个组 -->
+        <input type="radio" name="a" checked>小宁 <!-- checked默认选中 -->
+        <input type="radio" name="a">小明
+        <input type="radio" name="a">小柠
+        <h4>select选择</h4>
+        你喜欢吃啥？
+        <select>
+            <option>热狗</option>
+            <option>汉堡</option>
+            <option>鸡腿</option>
+        </select>
+        <h4>datalist选择</h4>
+        <!-- 必须搭配文本框使用，并且input的list值与datalist的id值相同 -->
+        <input type="text" list="list1">
+        <datalist id="list1">
+            <option>热狗</option>
+            <option>鸡腿</option>
+            <option>汉堡</option>
+        </datalist>
+        <h4>日期选择器</h4>
+        <input type="date">
+        <h4>颜色选择器</h4>
+        <input type="color">
+        <h4>图片按钮</h4>
+        <input type="image" src="imgs/download.png" width="60px">
+        <h4>上传控件</h4>
+        <input type="file">
+        <h4>可以上传多个文件的上传控件</h4>
+        <input type="file" multiple> <!--  multiple可以上传多个文件 -->
+
+    </form>
+
+    <h3>文字显示框？</h3>
+    <textarea cols="20" rows="2">
+    这里是文字..
+    </textarea>
+
+    <h3>button按钮标签，运用范围广</h3>
+    <button>按钮</button>
+
+    <h3>img图片标签</h3>
+    <h4>正常的图片显示</h4>
+    <img src="imgs/download.png" alt="下载" title="下载"> <!-- title属性，鼠标悬停时显示提示信息 -->
+    <h4>不正常的图片显示</h4>
+    <img src="imgs/download1.png" alt="图片不存在哦"> <!-- alt属性，图片不存在时显示备用信息 -->
+    <h4>和超链接相结合：“图片按钮”</h4>
+    <a href="https://www.baidu.com" target="_blank"> <!-- target属性，定义跳转至超链接的方式，_blank为创建新窗口，默认时为_self -->
+        <img src="imgs/link_rect.png" alt="跳转至百度" title="跳转至百度">
+    </a>
+    <h4>锚点图片</h4>
+    <img src="imgs/link_rect.png" usemap="#map1">
+    <map name="map1">
+        <!-- shape属性：rect矩形区域 coords：左边距，上边距，右边距，下边距 -->
+        <area shape="rect" coords="3,5,92,120" href="a.html" target="_blank">
+    </map>
+    <img src="imgs/link_circle.png" usemap="#map2">
+    <map name="map2">
+        <!-- shape属性：circle圆形区域 coords：左边缘到圆心距，右边缘到圆心距，圆半径 -->
+        <area shape="circle" coords="63px,63px,63px" href="a.html" target="_blank">
+    </map>
+    <h3>视频</h3>
+    <!-- preload预加载，3个属性值none不加载，auto默认，缓冲整个视频，metadata只加载第一帧-->
+    <!-- poster属性，设置视频的封面 controls显示播放组件 muted静音 loop循环 autoplay网页加载后自动播放 -->
+    <video src="videos/planet.mp4" width="100%" poster="imgs/poster1.png" controls>
+        <!-- 指定视频的类型，当浏览器不支持该格式视频时，如果网站有该浏览器支持的格式，会切换到它支持的格式的视频 -->
+        <source src="videos/planet.mp4" type="video/mp4"/>
+    </video>
+    <h3>音频</h3>
+    <audio src="audios/超大只怪兽.mp3" controls>
+        <source src="audios/超大只怪兽.mp3" type="audio/mp3"/>
+    </audio>
+    <h3>新的篇章之CSS</h3>
+    <a href="a.html">click to turn</a>
+
+</body>
+</html>
